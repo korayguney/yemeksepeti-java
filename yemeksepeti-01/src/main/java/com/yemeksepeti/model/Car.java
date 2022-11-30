@@ -1,5 +1,8 @@
 package com.yemeksepeti.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Car extends Vehicle{
     private String color;
 
@@ -10,6 +13,10 @@ public class Car extends Vehicle{
 
     public Car(String color) {
         this.color = color;
+    }
+
+    public Car() {
+
     }
 
     public String getColor() {

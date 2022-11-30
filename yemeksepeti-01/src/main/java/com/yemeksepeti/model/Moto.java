@@ -1,5 +1,8 @@
 package com.yemeksepeti.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Moto extends Vehicle {
     private double enginePower;
 
@@ -10,6 +13,9 @@ public class Moto extends Vehicle {
 
     public Moto(double enginePower) {
         this.enginePower = enginePower;
+    }
+
+    public Moto() {
     }
 
     public double getEnginePower() {

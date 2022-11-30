@@ -1,15 +1,27 @@
 package com.yemeksepeti.model;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 // POJO --> Plain Old Java Object
+@Entity
 public class Customer {
     // states (instance variables)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String fullname;
     private String address;
     private long ssid;
     private String phoneNumber;
 
+    @OneToMany(mappedBy = "customer")
+    private List<Vehicle> vehicles = new ArrayList<>();
+
     // Constructors
-    public Customer(){}
+    public Customer() {
+    }
 
     public Customer(String fullname, String address, long ssid, String phoneNumber) {
         this.fullname = fullname;
@@ -51,6 +63,23 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
+
 
     // toString(), hashCode(), equals()
 
