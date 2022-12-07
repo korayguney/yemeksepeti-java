@@ -10,6 +10,8 @@ public class BmiCalculator {
      static Double result;
 
     public static void main(String[] args) {
+        getWeigh();
+        getHeigh();
         result();
         if(result < 18.5){
             System.out.println(" You are underweigh");
@@ -25,13 +27,22 @@ public class BmiCalculator {
     }
 
     public static Double result (){
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Please enter weight");
-        weight = myObj.nextDouble();
-        System.out.println("Please enter height");
-        height = myObj.nextDouble();
         result = weight/(height*height);
         System.out.println("Result is :"+ result);
         return result;
+    }
+
+    public static Double getWeigh(){
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Please enter weight");
+        weight = myObj.nextDouble();
+        return weight;
+    }
+
+    public static Double getHeigh(){
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Please enter height");
+        height = myObj.nextDouble();
+        return height;
     }
 }
