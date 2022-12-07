@@ -12,11 +12,11 @@ public class BmiCalculator {
     public static void main(String[] args) {
         getWeigh();
         getHeigh();
-        getResult();
-        condition();
+        getBmi();
+        whatIsMyCondition();
     }
 
-    public static void condition(){
+    public static void whatIsMyCondition(){
         if(result < 18.5){
             System.out.println(" You are underweigh");
         }else if(result > 18.5 && result<24.9){
@@ -30,7 +30,7 @@ public class BmiCalculator {
         }
     }
 
-    public static Double getResult (){
+    public static Double getBmi (){
         result = weight/(height*height);
         System.out.println("Result is :"+ result);
         return result;
