@@ -15,7 +15,8 @@ public class BmiCalculator {
         weight = myObj.nextDouble();
         System.out.println("Please enter height");
         height = myObj.nextDouble();
-        result = weight/height;
+        result = weight/(height*height);
+        System.out.println("Result is :"+ result);
         if(result < 18.5){
             System.out.println(" You are underweigh");
         }else if(result > 18.5 && result<24.9){
@@ -30,4 +31,5 @@ public class BmiCalculator {
 
 
 
-}}
+}
+}
