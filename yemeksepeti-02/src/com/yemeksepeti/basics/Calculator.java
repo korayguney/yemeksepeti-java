@@ -5,7 +5,6 @@ import java.util.List;
 
 // comment...
 public class Calculator {
-    String test;
     String name;
     List<String> strings;
     java.awt.List test;
