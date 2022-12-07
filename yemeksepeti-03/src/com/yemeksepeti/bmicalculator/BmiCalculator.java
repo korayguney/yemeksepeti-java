@@ -10,13 +10,7 @@ public class BmiCalculator {
      static Double result;
 
     public static void main(String[] args) {
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Please enter weight");
-        weight = myObj.nextDouble();
-        System.out.println("Please enter height");
-        height = myObj.nextDouble();
-        result = weight/(height*height);
-        System.out.println("Result is :"+ result);
+        result();
         if(result < 18.5){
             System.out.println(" You are underweigh");
         }else if(result > 18.5 && result<24.9){
@@ -28,8 +22,16 @@ public class BmiCalculator {
         }else{
             System.out.println(" You entered incorrect values");
         }
+    }
 
-
-
-}
+    public static Double result (){
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Please enter weight");
+        weight = myObj.nextDouble();
+        System.out.println("Please enter height");
+        height = myObj.nextDouble();
+        result = weight/(height*height);
+        System.out.println("Result is :"+ result);
+        return result;
+    }
 }
