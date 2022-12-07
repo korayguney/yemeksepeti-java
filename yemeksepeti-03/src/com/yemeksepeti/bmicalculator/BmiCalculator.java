@@ -7,7 +7,8 @@ public class BmiCalculator {
 
     private static Double weight;
     private static Double height;
-     static Double result;
+    static Double result;
+    private static Scanner myObj = new Scanner(System.in);
 
     public static void main(String[] args) {
         getWeigh();
@@ -37,14 +38,12 @@ public class BmiCalculator {
     }
 
     public static Double getWeigh(){
-        Scanner myObj = new Scanner(System.in);
         System.out.println("Please enter weight");
         weight = myObj.nextDouble();
         return weight;
     }
 
     public static Double getHeigh(){
-        Scanner myObj = new Scanner(System.in);
         System.out.println("Please enter height");
         height = myObj.nextDouble();
         return height;
