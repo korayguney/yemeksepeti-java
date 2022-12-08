@@ -13,7 +13,18 @@ public class BankAccount {
     }
 
     public BankAccount(String phoneNumber) {
+        // custom executes
+        System.out.println("Constuctor 1");
         this.phoneNumber = phoneNumber;
+    }
+
+    public BankAccount(long accountNumber, double balance, String customerName, String email, String phoneNumber) {
+        this(phoneNumber);
+        System.out.println("Constuctor 2");
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
     }
 
     // custom methods
