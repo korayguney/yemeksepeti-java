@@ -20,20 +20,11 @@ public class Metro {
             secim = scanner.nextInt();
 
             switch (secim) {
-                case 1:
-                    bakiyeGoruntule();
-                    break;
-                case 2:
-                    kartaParaYukle();
-                    break;
-                case 3:
-                    metroyaBin();
-                    break;
-                case 4:
-                    sistemdenCikis();
-                    break;
-                default:
-                    System.out.println("Yanliş seçim. Tekrar seçiniz!");
+                case 1 -> bakiyeGoruntule();
+                case 2 -> kartaParaYukle();
+                case 3 -> metroyaBin();
+                case 4 -> sistemdenCikis();
+                default -> System.out.println("Yanliş seçim. Tekrar seçiniz!");
             }
 
         } while (secim != 4);
