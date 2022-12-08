@@ -1,6 +1,5 @@
 package com.yemeksepeti.bmicalculator;
 
-
 import java.util.Scanner;
 
 public class BmiCalculator {
@@ -8,12 +7,12 @@ public class BmiCalculator {
     private static Double weight;
     private static Double height;
     static Double bmi;
-    private static Scanner myObj = new Scanner(System.in);
+    private static final Scanner myObj = new Scanner(System.in);
 
     public static void main(String[] args) {
-        getWeigh();
-        getHeigh();
-        getBmi();
+        getWeight();
+        getHeight();
+        calculateBmi();
         whatIsMyCondition();
     }
 
@@ -31,19 +30,18 @@ public class BmiCalculator {
         }
     }
 
-    public static Double getBmi (){
+    public static void calculateBmi (){
         bmi = weight/(height*height);
         System.out.println("Bmi is :"+ bmi);
-        return bmi;
     }
 
-    public static Double getWeigh(){
+    public static void getWeight(){
         System.out.println("Please enter weight");
-        return weight = myObj.nextDouble();
+        weight = myObj.nextDouble();
     }
 
-    public static Double getHeigh(){
+    public static void getHeight(){
         System.out.println("Please enter height");
-        return height = myObj.nextDouble();
+        height = myObj.nextDouble();
     }
 }
