@@ -11,6 +11,7 @@
 
     <modules>
         <module>yemeksepeti-01</module>
+        <module>haci-takehome</module>
     </modules>
 
     <properties>
