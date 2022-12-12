@@ -10,9 +10,11 @@ public class Pen {
         shape.setColor(color);
 
         if (shape instanceof Circle) {
-            System.out.println("Ccrcle color is : " + shape.getColor());
+            System.out.println("Circle color is : " + shape.getColor());
         } else if (shape instanceof Rectangle) {
             System.out.println("Rectangle color is : " + shape.getColor());
+        } else if (shape instanceof Triangle) {
+            System.out.println("Triangle color is : " + shape.getColor());
         }
 
     }
