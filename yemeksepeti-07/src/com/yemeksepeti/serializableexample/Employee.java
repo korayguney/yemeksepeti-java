@@ -3,12 +3,13 @@ package com.yemeksepeti.serializableexample;
 import java.io.Serializable;
 import java.util.Objects;
 
+// POJO --> Plain Old Java Object
 public class Employee implements Serializable {
 
     private static final long serialVersionUID = -100L;
 
     private String name;
-    private String address;
+    private transient String address;
     private int age;
 
     public Employee() {

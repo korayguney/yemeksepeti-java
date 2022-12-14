@@ -6,7 +6,7 @@ public class EmployeeTest {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         serialize("employee.ser");
-        deserialize("employee.ser");
+      // deserialize("employee.ser");
     }
 
     public static void deserialize(String filename) throws IOException, ClassNotFoundException {
@@ -21,7 +21,7 @@ public class EmployeeTest {
         Employee employee = new Employee();
         employee.setName("Koray");
         employee.setAddress("Tuzla");
-        employee.setAge(36);
+        employee.setAge(39);
 
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename));
         oos.writeObject(employee);
