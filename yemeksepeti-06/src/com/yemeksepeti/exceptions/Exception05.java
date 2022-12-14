@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Exception04 {
+public class Exception05 {
 
     public static void main(String[] args) {
         // try {
@@ -24,26 +24,14 @@ public class Exception04 {
 
     private static void testException() {
         String file = "test.txt";
-        InputStream in = null;
-        try {
+        try(InputStream in = new FileInputStream(file)){
             System.out.println("The file will be opened...");
             // System.out.println(1 / 0);
-            in = new FileInputStream(file);
             System.out.println("The file is opened...");
-        } catch (ArithmeticException | FileNotFoundException | NullPointerException e) {
+        } catch (ArithmeticException | NullPointerException e) {
             System.out.println("An exception occured..." + e.getMessage());
-        } finally {
-            System.out.println("The inputstream is closed...");
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
-
-
 }

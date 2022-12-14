@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="yemeksepeti-06:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/yemeksepeti_06_jar</output-path>
+    <root id="archive" name="yemeksepeti-06.jar">
+      <element id="module-output" name="yemeksepeti-06" />
+    </root>
+  </artifact>
+</component>
